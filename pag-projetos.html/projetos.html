@@ -1,116 +1,144 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="pt-BR"> <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Portfólio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Projetos - Portfólio de Carlos Eduardo</title> <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link rel="shortcut icon" href="/assets/social.png" type="image/x-icon">
+    
+    <link rel="stylesheet" href="css/style.css"> 
+    
+    <link rel="stylesheet" href="css/projetos.css"> 
 
-    <link rel="stylesheet" href="projetos.css">
+    <link rel="shortcut icon" href="assets/social.png" type="image/x-icon"> 
 </head>
 <body>
     <header class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
-        <a href="/index.html"><span class="navbar-brand d-flex align-items-center" href="#">
-            <i class="fab fa-android me-2 " style="font-size: 30px; color: white;"></i>
+        <a class="navbar-brand d-flex align-items-center" href="index.html"> 
+            <i class="fab fa-android me-2" style="font-size: 30px; color: white;"></i>
             <span>Android Dev</span>
-        </span></a>
+        </a>
         
-        
-        
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item d-lg-none"><a class="nav-link text-white" href="/pag-objetivos.html/objetivos.html">Objetivos</a></li>
-                <li class="nav-item d-lg-none"><a class="nav-link text-white" href="/pag-educacao.html/educacao.html">Educação</a></li>
-                <li class="nav-item d-lg-none"><a class="nav-link text-white" href="/pag-experiencias.html/experiencias.html">Experiências</a></li>
-                <!--<li class="nav-item d-lg-none"><a class="nav-link text-white" href="/pag-certificados.html/certificados.html">Certificados</a></li>-->
-                <li class="nav-item d-lg-none"><a class="nav-link text-white" href="projetos.html">Projetos</a></li>
-
-                
-                <li class="nav-item"><a class="nav-link" href="/pag-contato.html/contato.html">Contato</a></li>
+                <li class="nav-item d-lg-none"><a class="nav-link text-white" href="pag-objetivos.html">Objetivos</a></li>
+                <li class="nav-item d-lg-none"><a class="nav-link text-white" href="pag-educacao.html">Educação</a></li>
+                <li class="nav-item d-lg-none"><a class="nav-link text-white" href="pag-experiencias.html">Experiências</a></li>
+                <li class="nav-item d-lg-none"><a class="nav-link text-white" href="projetos.html">Projetos</a></li> <li class="nav-item"><a class="nav-link" href="pag-contato.html">Contato</a></li> 
             </ul>
         </div>
     </header>
 
     <div class="d-flex">
-        <!-- Barra lateral -->
         <nav class="sidebar text-white p-3 d-none d-lg-block">
             <div class="text-center">
-                <img src="/assets/images-removebg-preview.png" alt="Minha Foto" class="profile-img rounded-circle mb-2">
-                <h3 class="text-primary"><a href="/index.html">Carlos Eduardo</a></h3>
-                <hr>
+                <img src="assets/images-removebg-preview.png" alt="Minha Foto de Perfil" class="profile-img rounded-circle mb-2 img-fluid">
+                <h3 class="text-primary"><a href="index.html">Carlos Eduardo</a></h3> <hr>
             </div>
             <ul class="nav flex-column">
-                <li class="nav-item "><a class="nav-link text-white" href="/pag-objetivos.html/objetivos.html">Objetivos</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="/pag-educacao.html/educacao.html">Educação</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="/pag-experiencias.html/experiencias.html">Experiências</a></li>
-               <!--<li class="nav-item"><a class="nav-link text-white" href="certificados.html">Certificados</a></li>--> 
-                <li class="nav-item bg-primary"><a class="nav-link text-white" href="projetos.html">Projetos</a></li>
-            </ul>
+                <li class="nav-item"><a class="nav-link text-white" href="pag-objetivos.html">Objetivos</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="pag-educacao.html">Educação</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="pag-experiencias.html">Experiências</a></li>
+                <li class="nav-item bg-primary"><a class="nav-link text-white" href="projetos.html">Projetos</a></li> </ul>
         </nav>
 
-        <!-- Conteúdo principal -->
-        <main class="container py-5">
-            <h2 class="display-4 text-primary text-center mb-4">Meus Projetos</h2>
+        <main class="container-fluid flex-grow-1 py-5 px-lg-5"> <h2 class="display-4 text-primary text-center mb-4">Meus Projetos</h2>
             <p class="lead text-muted text-center mb-5">
                 Aqui estão alguns dos principais projetos que desenvolvi, desde aplicativos Android até soluções web inovadoras.
             </p>
             
-            <!-- Projeto 1 -->
-            <div class="row mb-5 align-items-center fundo text-white">
-                <div class="col-md-12 col-lg-4">
-                    <div id="carouselProjeto1" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="/assets/projetos/eco1.PNG" class="d-block w-100" alt="Projeto 1 - Imagem 1">
+            <div class="row mb-5 align-items-center bg-dark text-white p-4 rounded shadow"> <div class="col-md-12 col-lg-4 mb-4 mb-lg-0"> <div id="carouselProjeto1" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner rounded"> <div class="carousel-item active">
+                                <img src="assets/projetos/eco1.PNG" class="d-block w-100" alt="EcoChoice - Tela Inicial">
                             </div>
                             <div class="carousel-item">
-                                <img src="/assets/projetos/eco2.PNG" class="d-block w-100" alt="Projeto 1 - Imagem 2">
+                                <img src="assets/projetos/eco2.PNG" class="d-block w-100" alt="EcoChoice - Recursos">
                             </div>
                             <div class="carousel-item">
-                                <img src="/assets/projetos/eco3.PNG" class="d-block w-100" alt="Projeto 1 - Imagem 3">
+                                <img src="assets/projetos/eco3.PNG" class="d-block w-100" alt="EcoChoice - Configurações">
                             </div>
                             <div class="carousel-item">
-                                <img src="/assets/projetos/eco4.PNG" class="d-block w-100" alt="Projeto 1 - Imagem 4">
+                                <img src="assets/projetos/eco4.PNG" class="d-block w-100" alt="EcoChoice - Sobre">
                             </div>
                         </div>
-                        <a class="carousel-control-prev" href="#carouselProjeto1" role="button" data-bs-slide="prev">
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselProjeto1" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        </a>
-                        <a class="carousel-control-next" href="#carouselProjeto1" role="button" data-bs-slide="next">
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselProjeto1" data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        </a>
+                            <span class="visually-hidden">Próximo</span>
+                        </button>
                     </div>
                 </div>
                 <div class="col-md-12 col-lg-8">
-                    <h2 class="title">EcoChoice</h2>
-                    <p>O aplicativo EcoChoice foi desenvolvido com o objetivo de incentivar e facilitar a adoção 
+                    <h2 class="title mb-3">EcoChoice</h2> <p>O aplicativo EcoChoice foi desenvolvido com o objetivo de incentivar e facilitar a adoção 
                         de práticas sustentáveis no dia a dia dos usuários. Buscamos conscientizar sobre a 
                         importância da sustentabilidade e oferecer ferramentas práticas para que os usuários 
                         possam fazer escolhas mais ecológicas.
-                         O principal objetivo do EcoChoice é ser um guia e um companheiro para os usuários em 
+                        O principal objetivo do EcoChoice é ser um guia e um companheiro para os usuários em 
                         sua jornada rumo a um estilo de vida mais sustentável, fornecendo informações, 
                         ferramentas e incentivo para que eles possam fazer escolhas mais ecológicas em seu dia a 
                         dia. O público-alvo são pessoas que desejam adotar um estilo de vida mais sustentável, 
-                        mas não sabem por onde começar ou precisam de incentivo e ferramentas para isso.</p>
+                        mas não sabem por onde começar ou precisam de incentivo e ferramentas para isso.
+                    </p>
+                    <div class="d-flex flex-wrap gap-2 mt-4"> <span class="badge bg-secondary">Android Studio</span>
+                        <span class="badge bg-secondary">Java/Kotlin</span>
+                        <span class="badge bg-secondary">UI/UX Design</span>
+                        <span class="badge bg-secondary">Sustentabilidade</span>
+                        </div>
+                    <div class="mt-4">
+                        <a href="https://github.com/seu-usuario/EcoChoice" target="_blank" class="btn btn-outline-light me-2"><i class="fab fa-github me-1"></i> Ver no GitHub</a>
+                        </div>
                 </div>
-            </div>        
+            </div>        
             
-            <div class="text-center mt-5">
-                <a href="/pag-contato.html/contato.html" class="btn btn-lg btn-success">Entre em contato para saber mais!</a>
+            <div class="row mb-5 align-items-center bg-light text-dark p-4 rounded shadow">
+                <div class="col-md-12 col-lg-4 order-lg-2 mb-4 mb-lg-0"> <div id="carouselProjeto2" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner rounded">
+                            <div class="carousel-item active">
+                                <img src="assets/projetos/design1.PNG" class="d-block w-100" alt="Site Designer - Imagem 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/projetos/design2.PNG" class="d-block w-100" alt="Site Designer - Imagem 2">
+                            </div>
+                            </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselProjeto2" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselProjeto2" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Próximo</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-8 order-lg-1"> <h2 class="title mb-3">Site para Designer</h2>
+                    <p>Desenvolvimento de um site profissional e responsivo para um designer gráfico. O projeto focou em uma experiência de usuário intuitiva e na apresentação visual dos trabalhos do designer, destacando seu portfólio de forma criativa e funcional. Tecnologias utilizadas incluem HTML5, CSS3, JavaScript e Bootstrap para garantir a compatibilidade com diferentes dispositivos.</p>
+                    <div class="d-flex flex-wrap gap-2 mt-4">
+                        <span class="badge bg-secondary">HTML5</span>
+                        <span class="badge bg-secondary">CSS3</span>
+                        <span class="badge bg-secondary">JavaScript</span>
+                        <span class="badge bg-secondary">Bootstrap</span>
+                        <span class="badge bg-secondary">Web Design</span>
+                    </div>
+                    <div class="mt-4">
+                        <a href="https://github.com/seu-usuario/site-designer" target="_blank" class="btn btn-outline-dark me-2"><i class="fab fa-github me-1"></i> Ver no GitHub</a>
+                        </div>
+                </div>
             </div>
-        </main>
-        
-        
 
-    <footer class="bg-dark text-white text-center p-3">
+            <div class="text-center mt-5">
+                <a href="pag-contato.html" class="btn btn-lg btn-success">Entre em contato para saber mais!</a> </div>
+        </main>
+    </div>
+    
+    <footer class="bg-dark text-white text-center p-3 mt-auto">
         &copy; 2024 Carlos - Todos os direitos reservados.
     </footer>
-</body>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
 </html>
