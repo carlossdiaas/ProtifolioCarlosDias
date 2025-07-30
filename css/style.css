@@ -7,7 +7,7 @@ body {
     min-height: 100vh;
     font-family: 'Poppins', sans-serif;
     background-color: #f4f4f4;
-    background: url('/assets/Design\ sem\ nome\ \(10\).png');
+    background: url(../assets/fundo1.png);
     background-blend-mode: overlay;
     background-color: rgba(131, 131, 131, 0.61);
 }
@@ -17,7 +17,7 @@ main {
     font-size: 16px;
     line-height: 1.6;
     color: #333;
-    background: url('/assets/textura-de-papel-branco_1194-2301.avif');
+    background: url(../assets/papel.avif);
     border-radius: 10px;
     background-blend-mode: overlay;
     background-color: rgba(255, 255, 255, 0.60);
