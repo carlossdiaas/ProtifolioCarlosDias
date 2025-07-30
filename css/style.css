@@ -128,7 +128,7 @@ footer {
 
 /* Estilização do herói */
 #hero {
-    background: url(/assets/Design\ sem\ nome\ \(6\).png) no-repeat center center;
+    background: url(../assets/minhafoto.png) no-repeat center center;
     background-size: cover;
     height: 30vh;
     padding: 100px 0;
