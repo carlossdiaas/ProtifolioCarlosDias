@@ -5,9 +5,9 @@
 }
 
 .carousel-item img {
-    width: 100%;  /* Garante que as imagens ocupem toda a largura do carrossel */
-    height: auto; /* Mantém a proporção da imagem */
-    object-fit: cover;  /* Faz com que as imagens preencham o espaço sem distorcer */
+    width: 100%; 
+    height: auto; 
+    object-fit: cover; 
 }
 
 /* Estilo do card */
@@ -24,5 +24,16 @@
     color: rgb(255, 255, 255);
 }
 
-/* Ajuste do layout para telas pequenas */
+/* Sidebar styling */
+.sidebar {
+    width: 250px; /* Adjust as needed */
+    background-color: #343a40; /* Dark background */
+    flex-shrink: 0; /* Prevent sidebar from shrinking */
+}
 
+
+
+
+.sidebar a.nav-link:hover {
+    background-color: #007bff; /* Primary color on hover */
+}

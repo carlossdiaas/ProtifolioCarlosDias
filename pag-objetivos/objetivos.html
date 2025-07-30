@@ -3,19 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Portfólio - Objetivos</title> <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css"> 
+    <title>Meu Portfólio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link rel="shortcut icon" href="../assets/social.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/assets/social.png" type="image/x-icon">
     <link rel="stylesheet" href="objetivos.css">
 </head>
 <body>
     <header class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
-        <a href="../index.html"><span class="navbar-brand d-flex align-items-center">
+        <span class="navbar-brand d-flex align-items-center" href="#">
             <i class="fab fa-android me-2 " style="font-size: 30px; color: white;"></i>
-            <span>Android Dev</span>
-        </span></a>
+            <span id="digitando"></span>
+        </span>
+        
+        
         
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
@@ -23,30 +27,35 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item d-lg-none"><a class="nav-link text-white" href="objetivos.html">Objetivos</a></li>
-                <li class="nav-item d-lg-none"><a class="nav-link text-white" href="../pag-educacao/educacao.html">Educação</a></li>
-                <li class="nav-item d-lg-none"><a class="nav-link text-white" href="../pag-experiencias/experiencias.html">Experiências</a></li>
-                <li class="nav-item d-lg-none"><a class="nav-link text-white" href="../pag-projetos/projetos.html">Projetos</a></li>
+                <li class="nav-item d-lg-none"><a class="nav-link text-white" href="/pag-educacao/educacao.html">Educação</a></li>
+                <li class="nav-item d-lg-none"><a class="nav-link text-white" href="/pag-experiencias/experiencias.html">Experiências</a></li>
+               <!--<li class="nav-item d-lg-none"><a class="nav-link text-white" href="/pag-certificados.html/certificados.html">Certificados</a></li>--> 
+                <li class="nav-item d-lg-none"><a class="nav-link text-white" href="/pag-projetos/projetos.html">Projetos</a></li>
 
-                <li class="nav-item"><a class="nav-link" href="../pag-contato/contato.html">Contato</a></li>
+               
+                <li class="nav-item"><a class="nav-link" href="/pag-contato.html/contato.html">Contato</a></li>
             </ul>
         </div>
     </header>
 
-    <div class="container">
+    <div class="d-flex">
+        <!-- Barra lateral -->
         <nav class="sidebar text-white p-3 d-none d-lg-block">
             <div class="text-center">
-                <img src="../assets/images-removebg-preview.png" alt="Minha Foto" class="profile-img rounded-circle mb-2">
-                <h3 class="text-primary"><a href="../index.html">Carlos Eduardo</a></h3>
+                <img src="/assets/images-removebg-preview.png" alt="Minha Foto" class="profile-img rounded-circle mb-2">
+                <h3 class="text-primary"><a href="/index.html">Carlos Eduardo</a></h3>
                 <hr>
             </div>
             <ul class="nav flex-column">
-                <li class="nav-item bg-primary"><a class="nav-link text-white" href="objetivos.html">Objetivos</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="../pag-educacao/educacao.html">Educação</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="../pag-experiencias/experiencias.html">Experiências</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="../pag-projetos/projetos.html">Projetos</a></li>
+                <li class="nav-item bg-primary"><a class="nav-link text-white" href="#">Objetivos</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="/pag-educacao/educacao.html">Educação</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="/pag-experiencias/experiencias.html">Experiências</a></li>
+                <!--<li class="nav-item"><a class="nav-link text-white" href="/pag-certificados.html/certificados.html">Certificados</a></li>-->
+                <li class="nav-item"><a class="nav-link text-white" href="/pag-projetos/projetos.html">Projetos</a></li>
             </ul>
         </nav>
 
+        <!-- Conteúdo principal -->
         <main class="container">
             <section id="objetivos" class="text-center py-5">
                 <h2 class="display-4 text-primary mb-4">Objetivos Profissionais</h2>
@@ -55,6 +64,7 @@
                     Estou comprometido em aprimorar minhas habilidades em Android e pronto para contribuir com soluções inovadoras no desenvolvimento de aplicativos móveis.
                 </p>
                 
+                <!-- Barra de Progresso de Habilidades -->
                 <div class="row">
                     <div class="col-md-7 offset-md-3">
                         <h5 class="text-primary mb-4" style="font-size: 1.5rem;">Minhas Habilidades</h5>
@@ -73,10 +83,13 @@
                     </div>
                 </div>
                 
+        
+                <!-- Citação Inspiradora -->
                 <blockquote class="blockquote text-center mt-5">
                     <p class="mb-0">"O sucesso é a soma de pequenos esforços repetidos dia após dia." – Robert Collier</p>
                 </blockquote>
         
+                <!-- Card com Visão -->
                 <div class="row justify-content-center mt-5">
                     <div class="col-md-6">
                         <div class="card shadow-lg">
@@ -90,11 +103,13 @@
                     </div>
                 </div>
         
+                <!-- Call-to-Action -->
                 <div class="mt-4">
-                    <a href="../pag-contato/contato.html" class="btn btn-primary btn-lg">Vamos Conversar!</a>
+                    <a href="#contato" class="btn btn-primary btn-lg">Vamos Conversar!</a>
                 </div>
             </section>
         </main>
+        
         
     </div>
 
@@ -102,4 +117,15 @@
         &copy; 2024 Carlos - Todos os direitos reservados.
     </footer>
 </body>
+<script>
+        var typed = new Typed("#digitando", {
+    strings: ["Um criador de soluções inovadoras!", "Apaixonado por tecnologia!","Um Desenvolvedor Android!",  "Que adora aprender!"],
+    typeSpeed: 80,   // Velocidade de digitação
+    backSpeed: 50,   // Velocidade ao apagar
+    startDelay: 500, // Pequeno atraso antes de começar
+    backDelay: 1000, // Tempo antes de apagar
+    loop: true       // Para repetir indefinidamente
+});
+
+    </script>
 </html>
