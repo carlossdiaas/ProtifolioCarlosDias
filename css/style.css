@@ -203,4 +203,8 @@ body.fade-in {
         opacity: 1;
     }
 }
-
+@media (min-width: 768px) {
+  html {
+    font-size: 1.10rem; /* 18px */
+  }
+}
