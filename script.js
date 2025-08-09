@@ -98,3 +98,33 @@
         // Run animation on load and scroll
         window.addEventListener('load', animateOnScroll);
         window.addEventListener('scroll', animateOnScroll);
+
+        //carousel functionality
+document.addEventListener("DOMContentLoaded", () => {
+    const images = ["imgs/ELITE1.png", "imgs/ELITE2.png", "imgs/ELITE3.png", "imgs/ELITE4.png"];
+    let currentIndex = 0;
+
+    const imgElement = document.getElementById("elite-carousel");
+    const prevBtn = document.getElementById("prev-btn");
+    const nextBtn = document.getElementById("next-btn");
+
+    function showImage(index) {
+        imgElement.src = images[index];
+    }
+
+    prevBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        showImage(currentIndex);
+    });
+
+    nextBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % images.length;
+        showImage(currentIndex);
+    });
+
+    // Troca automática a cada 4 segundos
+    setInterval(() => {
+        currentIndex = (currentIndex + 1) % images.length;
+        showImage(currentIndex);
+    }, 4000);
+});
