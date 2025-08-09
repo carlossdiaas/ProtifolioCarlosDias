@@ -1,136 +1,566 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Portfólio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    
+    <title>Carlos Dias | Portfólio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 
-    <link rel="shortcut icon" href="assets/social.png" type="image/x-icon">
 </head>
-<body>
-    <header class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
-        <span class="navbar-brand d-flex align-items-center" href="#">
-            <i class="fab fa-android me-2 " style="font-size: 30px; color: white;"></i>
-            <span id="digitando"></span>
-        </span>
-        
-        
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item d-lg-none"><a class="nav-link text-white" href="pag-objetivos/objetivos.html">Objetivos</a></li>
-                <li class="nav-item d-lg-none"><a class="nav-link text-white" href="pag-educacao/educacao.html">Educação</a></li>
-                <li class="nav-item d-lg-none"><a class="nav-link text-white" href="pag-experiencias/experiencias.html">Experiências</a></li>
-                <li class="nav-item d-lg-none"><a class="nav-link text-white" href="pag-projetos/projetos.html">Projetos</a></li>
-                <li class="nav-item"><a class="nav-link" href="https://www.linkedin.com/in/carlos-eduardo-847a68236/">Contato</a></li>
-            </ul>
-        </div>
-    </header>
-
-    <div class="d-flex">
-        <nav class="sidebar text-white p-3 d-none d-lg-block">
-            <div class="text-center">
-                <img src="assets/images-removebg-preview.png" alt="Minha Foto" class="profile-img rounded-circle mb-2">
-                <h3 class="text-primary">Carlos Eduardo</h3>
-                <hr>
+<body class="font-sans bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-sm z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold gradient-text">Carlos Dias</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-10">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-blue-600 transition">Início</a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-blue-600 transition">Sobre</a>
+                    <a href="#skills" class="nav-link text-gray-700 hover:text-blue-600 transition">Habilidades</a>
+                    <a href="#projects" class="nav-link text-gray-700 hover:text-blue-600 transition">Projetos</a>
+                    <a href="#contact" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full hover:from-blue-700 hover:to-purple-700 transition-all shadow-lg hover:shadow-xl">Contato</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-gray-700 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
             </div>
-            <ul class="nav flex-column">
-                <li class="nav-item"><a class="nav-link text-white" href="pag-objetivos/objetivos.html">Objetivos</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="pag-educacao/educacao.html">Educação</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="pag-experiencias/experiencias.html">Experiências</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="pag-projetos/projetos.html">Projetos</a></li>
-            </ul>
-        </nav>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition">Início</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition">Sobre</a>
+                <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition">Habilidades</a>
+                <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition">Projetos</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 transition">Contato</a>
+            </div>
+        </div>
+    </nav>
 
-        <main class="container">
-            <section id="hero" class="text-center text-white d-flex align-items-end">
-                <div class="container pb-1">
-                    <p class="lead">Desenvolvedor Android apaixonado por criar soluções inovadoras</p>
-                    
-                </div>
-            </section>
-            
-            
-            <h1 class="display-4">Bem-vindo ao meu portfólio!</h1>
-            <p class="lead">Aqui você encontrará informações sobre minha trajetória, projetos, certificações e minha jornada no desenvolvimento de software Android. Fique à vontade para explorar e conhecer mais sobre o meu trabalho e habilidades!</p>
-<br>
-            <section id="objetivos">
-                <h2>Objetivos Profissionais</h2>
-                <p>Busco uma oportunidade de estágio ou vaga júnior em TI, com foco no desenvolvimento de software Android, otimização de sistemas e suporte a tecnologias empresariais. Estou comprometido em aprimorar minhas habilidades em Android e pronto para contribuir com soluções inovadoras no desenvolvimento de aplicativos móveis.</p>
-            </section>
-<br>
-            <section id="educacao">
-                <h2>Educação</h2>
-                <ul>
-                    <li>Bacharel em Análise e Desenvolvimento de Sistemas - Universidade FIAP 
-                        - Cursando 3º semestre
-                    </li>
-                    <li>Curso de Desenvolvimento Android - Plataforma Alura</li>
-                    <li>Curso de Desenvolvimento Web - Plataforma Curso em Vídeo</li>
-                </ul>
-            </section>
-<br>
-            <section id="experiencia">
-                <h2>Experiência Profissional</h2>
-                <ul>
-                    <li>Embora ainda não tenha experiência formal, já desenvolvi uma série de projetos práticos, como:
-
-                        Site para Designer: Criação de um site personalizado para um designer, com foco em design responsivo e experiência do usuário.
-                        Desenvolvimento de Aplicativos Android: Diversos aplicativos Android, com ênfase em funcionalidades intuitivas e design eficiente, disponíveis na seção de Projetos.
-                        Projetos Acadêmicos com iFood: Trabalhei em projetos com foco em integração e soluções inovadoras, como parte da minha formação na faculdade.
-                        Criação de Apps Web e Sites Responsivos: Desenvolvimento de aplicativos web e sites responsivos, garantindo uma experiência de usuário consistente em diferentes dispositivos.</li>
-                    
-                </ul>
-            </section>
-<br>
-            <section id="projetos">
-                <h2>Projetos</h2>
-                <div class="row">
-                    <div class="col-md-6">
-                        <h3>App de Controle de Tarefas</h3>
-                        <p>Aplicativo Android para gerenciar tarefas diárias com notificação e interface intuitiva.</p>
-                        <a href="#">Ver mais</a>
+    <!-- Hero Section -->
+    <section id="home" class="pt-28 pb-20 md:pt-36 md:pb-28 bg-gradient-to-br from-blue-50 via-purple-50 to-indigo-50 relative overflow-hidden">
+        <div class="wave absolute top-0 left-0 w-full h-full opacity-10 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjEpIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI3BhdHRlcm4pIi8+PC9zdmc+')]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
+                        Olá, eu sou <br>
+                        <span class="gradient-text typewriter">Carlos Dias</span>
+                    </h1>
+                    <h2 class="text-2xl md:text-3xl text-gray-600 mb-6">Desenvolvedor Full Stack</h2>
+                    <p class="text-lg text-gray-600 mb-8 max-w-lg">
+                        Transformo ideias em soluções digitais inovadoras que combinam design elegante com funcionalidades robustas.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#projects" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-full hover:from-blue-700 hover:to-purple-700 transition-all shadow-lg hover:shadow-xl flex items-center">
+                            <span>Ver Projetos</span>
+                            <i class="fas fa-arrow-down ml-2"></i>
+                        </a>
+                        <a href="#contact" class="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-full hover:bg-blue-50 transition-all flex items-center">
+                            <span>Contato</span>
+                            <i class="fas fa-paper-plane ml-2"></i>
+                        </a>
                     </div>
-                    <div class="col-md-6">
-                        <h3>App de Lista de Compras</h3>
-                        <p>Aplicativo Android para criar e gerenciar listas de compras.</p>
-                        <a href="#">Ver mais</a>
+                    <div class="mt-8 flex space-x-4">
+                        <a target="_blank" href="https://www.linkedin.com/in/carlos-eduardo-847a68236/" class="social-icon w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 hover:bg-blue-200">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a target="_blank" href="https://github.com/carlossdiaas" class="social-icon w-10 h-10 rounded-full bg-success-100 flex items-center justify-center text-gray-600 hover:bg-gray-200">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a target="_blank" href="https://wa.me/5574999580996" class="social-icon w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-gray-200">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
                     </div>
                 </div>
-            </section>
-<br>
-            <section id="certificados">
-                <h2>Certificados</h2>
-                <ul>
-                    <a href="https://on1.fiap.com.br/aluno/Certificado/Certificado/PreviewDocumento?caminhoArquivo=863523bf-1e7e-4f9b-8ed8-29e257457930.pdf&isOrigemAWS=False&rm=0" target="_blank"><li>Certificado de Qualificação Profissional em Análise e Design Web 2.0 - FIAP</li></a>
-                    <a href="https://on1.fiap.com.br/aluno/Certificado/Certificado/PreviewDocumento?caminhoArquivo=ceb6278d-637e-429f-97f5-14bca9ba1648.pdf&isOrigemAWS=False&rm=0" target="_blank"><li>Certificado de Qualificação Profissional em Análise de Sistemas e Prototipagem Web - FIAP</li></a>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96">
+                        <div class="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full opacity-20 blur-3xl animate-pulse"></div>
+                        <div class="relative w-full h-full rounded-full overflow-hidden border-4 border-white shadow-2xl floating">
+                            <img src="imgs/perfil.png"
+                                alt="Carlos Dias sorrindo levemente, olhando para a câmera, usando camiseta preta em fundo claro desfocado. Expressão transmite simpatia e confiança. Imagem centralizada em formato circular, destacando o rosto. Ambiente ao redor é neutro e suave, sem elementos de distração."
+                                class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Sobre <span class="gradient-text">Mim</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto"></div>
+                <p class="text-gray-600 mt-6 max-w-2xl mx-auto">
+                    Conheça minha trajetória profissional, formação acadêmica e minha paixão por desenvolvimento de software.
+                </p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/3 flex justify-center">
+                    <div class="relative w-64 h-64 md:w-72 md:h-72">
+                        <div class="absolute -inset-4 bg-gradient-to-r from-blue-400 to-purple-500 rounded-2xl opacity-20 blur-xl"></div>
+                        <div class="relative w-full h-full rounded-2xl overflow-hidden border-4 border-white shadow-xl">
+                            <img src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                                 alt="Carlos trabalhando"
+                                 class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-2/3">
+                    <h3 class="text-2xl md:text-3xl font-semibold mb-6">Desenvolvedor Full Stack</h3>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        Sou um desenvolvedor apaixonado por criar soluções digitais inovadoras. Com formação em Análise e Desenvolvimento de Sistemas e diversas certificações, meu foco está no desenvolvimento Full Stack e Arquitetura de Software, com ênfase especial em desenvolvimento Web e Android.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-gray-50 p-6 rounded-xl border border-gray-100 hover:border-blue-200 transition-all card-hover">
+                            <div class="flex items-center mb-3">
+                                <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                                    <i class="fas fa-user-graduate text-blue-600"></i>
+                                </div>
+                                <h4 class="font-semibold text-lg">Formação Acadêmica</h4>
+                            </div>
+                            <p class="text-gray-600">
+                                <span class="font-medium">Tecnólogo em Análise e Desenvolvimento de Sistemas</span><br>
+                                Universidade FIAP - Cursando 4º semestre
+                            </p>
+                        </div>
+                        
+                        <div class="bg-gray-50 p-6 rounded-xl border border-gray-100 hover:border-purple-200 transition-all card-hover">
+                            <div class="flex items-center mb-3">
+                                <div class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center mr-4">
+                                    <i class="fas fa-certificate text-purple-600"></i>
+                                </div>
+                                <h4 class="font-semibold text-lg">Certificações</h4>
+                            </div>
+                            <p class="text-gray-600">
+                                <span class="font-medium">Qualificação Profissional em Análise e Design Web 2.0</span><br>
+                                <span class="font-medium">Qualificação Profissional em Análise de Sistemas e Prototipagem Web</span>
+                            </p>
+                        </div>
+                        
+                        <div class="bg-gray-50 p-6 rounded-xl border border-gray-100 hover:border-green-200 transition-all card-hover">
+                            <div class="flex items-center mb-3">
+                                <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center mr-4">
+                                    <i class="fas fa-code text-green-600"></i>
+                                </div>
+                                <h4 class="font-semibold text-lg">Especialização</h4>
+                            </div>
+                            <p class="text-gray-600">
+                                Desenvolvimento Full Stack e Arquitetura de Software, com ênfase em desenvolvimento Web e Android.
+                            </p>
+                        </div>
+                        
+                        <div class="bg-gray-50 p-6 rounded-xl border border-gray-100 hover:border-yellow-200 transition-all card-hover">
+                            <div class="flex items-center mb-3">
+                                <div class="w-10 h-10 rounded-full bg-yellow-100 flex items-center justify-center mr-4">
+                                    <i class="fas fa-language text-yellow-600"></i>
+                                </div>
+                                <h4 class="font-semibold text-lg">Idiomas</h4>
+                            </div>
+                            <p class="text-gray-600">
+                                <span class="font-medium">Português:</span> Nativo<br>
+                                <span class="font-medium">Inglês:</span> Básico
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Minhas <span class="gradient-text">Habilidades</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto"></div>
+                <p class="text-gray-600 mt-6 max-w-2xl mx-auto">
+                    Tecnologias e ferramentas que utilizo para transformar ideias em realidade.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Frontend Skills -->
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 card-hover">
+                    <div class="w-14 h-14 rounded-xl bg-blue-100 flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-laptop-code text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-xl text-center mb-6">Frontend</h3>
+                    <ul class="space-y-3">
+                        <li class="skill-item flex items-center bg-blue-50 px-4 py-2 rounded-lg">
+                            <span class="w-3 h-3 bg-blue-600 rounded-full mr-3"></span>
+                            <span class="font-medium">React.js</span>
+                        </li>
+                        <li class="skill-item flex items-center bg-blue-50 px-4 py-2 rounded-lg">
+                            <span class="w-3 h-3 bg-blue-600 rounded-full mr-3"></span>
+                            <span class="font-medium">HTML5 & CSS3</span>
+                        </li>
+                        <li class="skill-item flex items-center bg-blue-50 px-4 py-2 rounded-lg">
+                            <span class="w-3 h-3 bg-blue-600 rounded-full mr-3"></span>
+                            <span class="font-medium">Bootstrap</span>
+                        </li>
+                        <li class="skill-item flex items-center bg-blue-50 px-4 py-2 rounded-lg">
+                            <span class="w-3 h-3 bg-blue-600 rounded-full mr-3"></span>
+                            <span class="font-medium">JavaScript/TypeScript</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Backend Skills -->
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 card-hover">
+                    <div class="w-14 h-14 rounded-xl bg-purple-100 flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-server text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-xl text-center mb-6">Backend</h3>
+                    <ul class="space-y-3">
+                        <li class="skill-item flex items-center bg-purple-50 px-4 py-2 rounded-lg">
+                            <span class="w-3 h-3 bg-purple-600 rounded-full mr-3"></span>
+                            <span class="font-medium">Python</span>
+                        </li>
+                        <li class="skill-item flex items-center bg-purple-50 px-4 py-2 rounded-lg">
+                            <span class="w-3 h-3 bg-purple-600 rounded-full mr-3"></span>
+                            <span class="font-medium">Django</span>
+                        </li>
+                        <li class="skill-item flex items-center bg-purple-50 px-4 py-2 rounded-lg">
+                            <span class="w-3 h-3 bg-purple-600 rounded-full mr-3"></span>
+                            <span class="font-medium">API REST</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Database Skills -->
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 card-hover">
+                    <div class="w-14 h-14 rounded-xl bg-green-100 flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-database text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-xl text-center mb-6">Banco de Dados</h3>
+                    <ul class="space-y-3">
+                        <li class="skill-item flex items-center bg-green-50 px-4 py-2 rounded-lg">
+                            <span class="w-3 h-3 bg-green-600 rounded-full mr-3"></span>
+                            <span class="font-medium">MongoDB</span>
+                        </li>
+                        <li class="skill-item flex items-center bg-green-50 px-4 py-2 rounded-lg">
+                            <span class="w-3 h-3 bg-green-600 rounded-full mr-3"></span>
+                            <span class="font-medium">MySQL</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Other Skills -->
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 card-hover">
+                    <div class="w-14 h-14 rounded-xl bg-yellow-100 flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-tools text-yellow-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-xl text-center mb-6">Outras Habilidades</h3>
+                    <ul class="space-y-3">
+                        <li class="skill-item flex items-center bg-yellow-50 px-4 py-2 rounded-lg">
+                            <span class="w-3 h-3 bg-yellow-600 rounded-full mr-3"></span>
+                            <span class="font-medium">Kotlin</span>
+                        </li>
+                        <li class="skill-item flex items-center bg-yellow-50 px-4 py-2 rounded-lg">
+                            <span class="w-3 h-3 bg-yellow-600 rounded-full mr-3"></span>
+                            <span class="font-medium">Java</span>
+                        </li>
+                        <li class="skill-item flex items-center bg-yellow-50 px-4 py-2 rounded-lg">
+                            <span class="w-3 h-3 bg-yellow-600 rounded-full mr-3"></span>
+                            <span class="font-medium">Cloud</span>
+                        </li>
+                        <li class="skill-item flex items-center bg-yellow-50 px-4 py-2 rounded-lg">
+                            <span class="w-3 h-3 bg-yellow-600 rounded-full mr-3"></span>
+                            <span class="font-medium">Scrum</span>
+                        </li>
+                        <li class="skill-item flex items-center bg-yellow-50 px-4 py-2 rounded-lg">
+                            <span class="w-3 h-3 bg-yellow-600 rounded-full mr-3"></span>
+                            <span class="font-medium">Android com Jetpack Compose</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Meus <span class="gradient-text">Projetos</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto"></div>
+                <p class="text-gray-600 mt-6 max-w-2xl mx-auto">
+                    Alguns dos projetos que desenvolvi, demonstrando minha versatilidade e habilidades técnicas.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card bg-gradient-to-br from-gray-50 to-blue-50 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                             alt="Dashboard Analytics"
+                             class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="font-bold text-xl">Dashboard Analytics</h3>
+                            <div class="flex space-x-2">
+                                <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">React</span>
+                                <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full">Node.js</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4">Plataforma de análise de dados em tempo real com visualizações interativas e personalizáveis.</p>
+                        <div class="flex justify-between items-center">
+                            <a href="#" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                                <span>Ver Detalhes</span>
+                                <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                            </a>
+                            <a href="#" class="text-gray-500 hover:text-gray-700 transition">
+                                <i class="fab fa-github text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card bg-gradient-to-br from-gray-50 to-purple-50 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                             alt="E-commerce App"
+                             class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="font-bold text-xl">E-commerce App</h3>
+                            <div class="flex space-x-2">
+                                <span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full">Kotlin</span>
+                                <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Firebase</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4">Aplicativo de comércio eletrônico com carrinho de compras, pagamentos e sistema de avaliações.</p>
+                        <div class="flex justify-between items-center">
+                            <a href="#" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                                <span>Ver Detalhes</span>
+                                <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                            </a>
+                            <a href="#" class="text-gray-500 hover:text-gray-700 transition">
+                                <i class="fab fa-github text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card bg-gradient-to-br from-gray-50 to-green-50 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1415&q=80"
+                             alt="Finance Tracker"
+                             class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="font-bold text-xl">Finance Tracker</h3>
+                            <div class="flex space-x-2">
+                                <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">React</span>
+                                <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded-full">TypeScript</span>
+                                <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">MongoDB</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4">Aplicativo web para gerenciamento financeiro pessoal com gráficos e relatórios detalhados.</p>
+                        <div class="flex justify-between items-center">
+                            <a href="#" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                                <span>Ver Detalhes</span>
+                                <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                            </a>
+                            <a href="#" class="text-gray-500 hover:text-gray-700 transition">
+                                <i class="fab fa-github text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a target="_blank" href="https://github.com/carlossdiaas" class="inline-flex items-center px-8 py-3 border-2 border-blue-600 text-blue-600 rounded-full hover:bg-blue-50 transition-all hover:shadow-lg">
+                    <span>Ver Todos os Projetos</span>
+                    <i class="fas fa-arrow-right ml-3"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gradient-to-br from-blue-50 via-purple-50 to-indigo-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Entre em <span class="gradient-text">Contato</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto"></div>
+                <p class="text-gray-600 mt-6 max-w-2xl mx-auto">
+                    Estou disponível para oportunidades de trabalho freelance ou projetos interessantes. Envie-me uma mensagem!
+                </p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-8">
+                <div class="lg:w-1/2">
+    <div class="bg-white p-8 rounded-xl shadow-lg h-full">
+        <h3 class="text-2xl font-semibold mb-6">Envie uma mensagem</h3>
         
-                </ul>
-            </section>
-        </main>
+        <!-- Formulário integrado com Formspree -->
+        <form class="space-y-6" action="https://formspree.io/f/meozvqoo" method="POST">
+            <div>
+                <label for="name" class="block text-gray-700 mb-2 font-medium">Nome</label>
+                <input type="text" id="name" name="name"
+                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent input-field transition"
+                       placeholder="Seu nome" required>
+            </div>
+            
+            <div>
+                <label for="email" class="block text-gray-700 mb-2 font-medium">Email</label>
+                <input type="email" id="email" name="_replyto"
+                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent input-field transition"
+                       placeholder="seu@email.com" required>
+            </div>
+            
+            <div>
+                <label for="subject" class="block text-gray-700 mb-2 font-medium">Assunto</label>
+                <input type="text" id="subject" name="subject"
+                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent input-field transition"
+                       placeholder="Assunto da mensagem" required>
+            </div>
+            
+            <div>
+                <label for="message" class="block text-gray-700 mb-2 font-medium">Mensagem</label>
+                <textarea id="message" name="message" rows="5"
+                          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent input-field transition"
+                          placeholder="Sua mensagem..." required></textarea>
+            </div>
+            
+            <button type="submit"
+                    class="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all shadow-lg hover:shadow-xl">
+                Enviar Mensagem
+            </button>
+        </form>
     </div>
+</div>
 
-    <footer class="bg-dark text-white text-center p-3">
-        &copy; 2024 Carlos - Todos os direitos reservados.
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-white p-8 rounded-xl shadow-lg h-full">
+                        <h3 class="text-2xl font-semibold mb-6">Informações de Contato</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4 mt-1">
+                                    <i class="fas fa-map-marker-alt text-blue-600 text-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-lg text-gray-900 mb-1">Localização</h4>
+                                    <p class="text-gray-600">Brasília-DF, Brasil</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center mr-4 mt-1">
+                                    <i class="fas fa-envelope text-purple-600 text-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-lg text-gray-900 mb-1">Email</h4>
+                                    <p class="text-gray-600">dudu.hjcd@gmail.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center mr-4 mt-1">
+                                    <i class="fas fa-phone-alt text-green-600 text-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-lg text-gray-900 mb-1">Telefone</h4>
+                                    <p class="text-gray-600">+55 (74) 99958-0996</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-12">
+                            <h4 class="font-medium text-lg text-gray-900 mb-4">Redes Sociais</h4>
+                            <div class="flex space-x-4">
+                                <a target="_blank" href="https://www.linkedin.com/in/carlos-eduardo-847a68236/" 
+                                   class="social-icon w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 hover:bg-blue-200 transition">
+                                    <i class="fab fa-linkedin-in text-xl"></i>
+                                </a>
+                                <a target="_blank" href="https://github.com/carlossdiaas" 
+                                   class="social-icon w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-gray-200 transition">
+                                    <i class="fab fa-github text-xl"></i>
+                                </a>
+                                                        <a target="_blank" href="https://wa.me/5574999580996" class="social-icon w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-gray-200">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8 border-t border-gray-200 pt-8">
+                            <h4 class="font-medium text-lg text-gray-900 mb-4">Entre em contato comigo</h4>
+                        <p class="text-gray-600 mb-2"><span class="font-medium">Estou disponível para inicio imediato</span> !</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0 text-center md:text-left">
+                    <span class="text-2xl font-bold gradient-text">Carlos Dias</span>
+                    <p class="text-gray-400 mt-2">Desenvolvedor Full Stack</p>
+                    <p class="text-gray-500 text-sm mt-4 max-w-md">
+                        Transformando ideias em soluções digitais inovadoras através de código limpo e design intuitivo.
+                    </p>
+                </div>
+                
+                <div class="flex flex-col items-center md:items-end">
+                    <div class="flex space-x-6 mb-6">
+                        <a href="#home" class="text-gray-400 hover:text-white transition">Início</a>
+                        <a href="#about" class="text-gray-400 hover:text-white transition">Sobre</a>
+                        <a href="#skills" class="text-gray-400 hover:text-white transition">Habilidades</a>
+                        <a href="#projects" class="text-gray-400 hover:text-white transition">Projetos</a>
+                        <a href="#contact" class="text-gray-400 hover:text-white transition">Contato</a>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a target="_blank" href="https://www.linkedin.com/in/carlos-eduardo-847a68236/" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-linkedin-in text-xl"></i>
+                        </a>
+                        <a target="_blank" href="https://github.com/carlossdiaas" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm text-center md:text-left mb-4 md:mb-0">
+                    © 2023 Carlos Dias. Todos os direitos reservados.
+                </p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-500 hover:text-gray-300 text-sm transition">Política de Privacidade</a>
+                    <a href="#" class="text-gray-500 hover:text-gray-300 text-sm transition">Termos de Serviço</a>
+                </div>
+            </div>
+        </div>
     </footer>
-    <script>
-        var typed = new Typed("#digitando", {
-    strings: ["Um Desenvolvedor Android!", "Apaixonado por tecnologia!", "Um criador de soluções inovadoras!", "Que adora aprender!"],
-    typeSpeed: 80,   // Velocidade de digitação
-    backSpeed: 50,   // Velocidade ao apagar
-    startDelay: 500, // Pequeno atraso antes de começar
-    backDelay: 1000, // Tempo antes de apagar
-    loop: true       // Para repetir indefinidamente
-});
 
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
